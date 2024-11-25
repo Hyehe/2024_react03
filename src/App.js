@@ -3,6 +3,8 @@ import './App.css';
 import Header from './component/Header';
 import DayList from './component/DayList';
 import Day from './component/Day';
+import CreateWord from './component/CreateWord';
+import CreateDay from './component/CreateDay';
 
 function App() {
   return (
@@ -14,8 +16,12 @@ function App() {
           {/* path='/'는 첫 페이지를 의미한다. (홈페이지) */}
           {/* 주소에 따라서 컴포넌트가 바뀐다. */}
           <Route path='/' element={<DayList />} />
+
           {/* : 동적라우팅 */}
           <Route path='/day/:day' element={<Day />} />
+
+          <Route path='/create_word' element={<CreateWord />} />
+          <Route path='/create_day' element={<CreateDay />} />
         </Routes>
       </div>
    </BrowserRouter>
